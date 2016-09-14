@@ -7,9 +7,9 @@
  * of the ISC license. See the LICENSE file for details.
  */
 
-#include "base.h"
-
 #include <assert.h>
+
+#include "handshake.h"
 
 void mcm_server_parse_login(union mcm_any *dest, enum mcm_id id, struct mcp_parse *src)
 {

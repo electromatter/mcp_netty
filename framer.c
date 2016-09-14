@@ -1,14 +1,18 @@
 #include <stdlib.h>
+#include <string.h>
+
 #include <zlib.h>
+
 #include <mcp_base/mcp.h>
 #include <mcp_base/fbuf.h>
-#include <mcp_netty/base.h>
-#include <string.h>
+
 #include <common/util.h>
 
 #ifndef NETTY_NO_CIPHER
 #include <common/aes.h>
 #endif
+
+#include "framer.h"
 
 struct netty_framer {
 	size_t frame_size, decomp_size;
